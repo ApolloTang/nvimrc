@@ -1065,47 +1065,9 @@ syntax enable  "/ Turn on syntax highlighting.
 " }
 
 
-" Python Setting {
-  "/ We no longer need to set python location any more because
-  "/ vim install via brew comes with python now.
-  "/
-  " set pythondll=/usr/local/Frameworks/Python.framework/Versions/3.9/Python
-  " set pythonhome=/usr/local/Frameworks/Python.framework/Versions/3.9
-  " set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.9/Python
-  " set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.9
-
-  "/ To check python version:
-  "
-  "/   :python import sys; print(sys.version)
-  "/   :python3 import sys; print(sys.version)
-  "/
-  "/   Ref: https://stackoverflow.com/a/10864154/3136861
-  "/
-  "/   :echo has("python")
-  "/   :echo has("python3")
-  "/   :echo &pythondll (only vim, not neovim)
-  "/   :echo &pythonthreedll (only vim, not neovim)
-  "/   :py print(sys.version):"
-  "/   :py3 print(sys.version):"
-  "/
-  "/   Ref: https://github.com/Yggdroot/LeaderF/issues/402
-  "/
-
-  "/ To compile with python/dyn from source and then install:
-  "/
-  "/   cd ~/_c
-  "/   git git@github.com:vim/vim.git
-  "/   cd vim
-  "/   make distclean    # <-- if you change compile option
-  "/   ./configure --with-features=huge --enable-pythoninterp --enable-python3interp
-  "/   sudo make install
-  "/
-  "/   A newly built vim will be installed under /usr/local
-  "/
-  "/   Ref:
-  "/   https://github.com/vim/vim/blob/master/READMEdir/README_mac.txt
-  "/   https://vi.stackexchange.com/a/24926/15493
-" }
+"/ Python Setting {
+  let g:python3_host_prog='~/1/1-sy/configurations/nvimrc/python-for-nvim/.venv/bin/python'
+"/ }
 
 "/ Essential Customization { ---------------------------------------------
   noremap <c-q> :q<CR>
